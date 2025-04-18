@@ -1,0 +1,50 @@
+.movie-card {
+  width: 200px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  mat-card-content {
+    padding: 16px;
+
+    h3 {
+      font-size: 1em;
+      margin: 0 0 8px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9em;
+
+      .rating {
+        display: flex;
+        align-items: center;
+        color: #f5c518;
+
+        mat-icon {
+          font-size: 1.2em;
+          height: 1.2em;
+          width: 1.2em;
+          margin-right: 4px;
+        }
+      }
+
+      .year {
+        color: #666;
+      }
+    }
+  }
+}

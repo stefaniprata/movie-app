@@ -1,1 +1,16 @@
-<p>movies-list works!</p>
+<div class="movie-list-container">
+  <section *ngFor="let category of categories" class="category-section">
+    <div class="category-header">
+      <h2 class="category-title">{{ category.title }}</h2>
+    </div>
+
+    <div class="movies-grid">
+      <app-movie-card
+        *ngFor="let movie of category.movies"
+        [movie]="movie"
+        class="movie-card-item"
+      >
+      </app-movie-card>
+    </div>
+  </section>
+</div>
