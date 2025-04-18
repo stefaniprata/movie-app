@@ -2,6 +2,23 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
 
+## 🐳 Run with Docker
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/stefaniprata/movie-app.git
+cd movie-app
+```
+
+```bash
+docker build -t stefani-movie-app .
+docker run -d -p 8080:80 --name stefani-movie-app-container stefani-movie-app
+```
+
+Then open your browser and visit:
+[http://localhost:8080](http://localhost:8080)
+
 ## Development server
 
 To start a local development server, run:

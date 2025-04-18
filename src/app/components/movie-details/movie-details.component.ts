@@ -6,10 +6,19 @@ import { Movie } from '../../interfaces/movie.interface';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-movie-details',
-  imports: [CommonModule, RouterModule, MatCardModule, MatIconModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatCardModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+  ],
   templateUrl: './movie-details.component.html',
   styleUrls: ['./movie-details.component.scss'],
 })

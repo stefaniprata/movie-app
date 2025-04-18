@@ -1,20 +1,16 @@
-// Variables to manage colors and typography
-$primary-color: #3f51b5;
-$secondary-color: #f5c518;
-$text-dark: #333;
-$text-light: #666;
+@use "variables" as v;
 
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: #f8f9fa;
+  font-family: v.$font-family-base;
+  color: v.$color-text-primary;
+  background-color: v.$color-background;
 }
 
 // Styles for global elements
 h1,
 h2,
 h3 {
-  color: $text-dark;
+  color: v.$color-text-primary;
   margin: 0.5em 0;
 }
 
