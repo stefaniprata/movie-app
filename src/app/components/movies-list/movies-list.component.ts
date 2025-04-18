@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
 import { CommonModule } from '@angular/common';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-movies-list',
-  imports: [CommonModule, MovieCardComponent],
+  imports: [CommonModule, RouterModule, MovieCardComponent],
   templateUrl: './movies-list.component.html',
   styleUrl: './movies-list.component.scss',
+  standalone: true,
 })
 export class MovieListComponent implements OnInit {
   categories = [

@@ -1,1 +1,112 @@
-<p>movie-details works!</p>
+<div class="movie-detail-container">
+  <button mat-button class="back-button" routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+    Back to Movies
+  </button>
+
+  <ng-container *ngIf="movie && !loading">
+    <mat-card class="detail-card">
+      <!-- Header Section -->
+      <div class="header-section">
+        <div class="poster-container">
+          <img
+            *ngIf="movie.poster_path"
+            [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+            [alt]="movie.title + ' poster'"
+            class="movie-poster"
+          />
+        </div>
+
+        <div class="header-info">
+          <h1 class="movie-title">{{ movie.title }}</h1>
+          <h3 class="movie-tagline" *ngIf="movie.tagline">
+            {{ movie.tagline }}
+          </h3>
+
+          <div class="metadata">
+            <span class="release-year">
+              {{ movie.release_date | date : "yyyy" }}
+            </span>
+            <span class="runtime">
+              {{ formatRuntime(movie.runtime) }}
+            </span>
+            <span
+              class="rating"
+              [style.color]="getRatingColor(movie.vote_average)"
+            >
+              {{ movie.vote_average | number : "1.1-1" }}/10
+            </span>
+          </div>
+
+          <!-- <mat-chip-list class="genre-list">
+            <mat-chip *ngFor="let genre of movie.genres" class="genre-chip">
+              {{ genre.name }}
+            </mat-chip>
+          </mat-chip-list> -->
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="content-section">
+        <img
+          *ngIf="movie.backdrop_path"
+          [src]="'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path"
+          [alt]="movie.title + ' backdrop'"
+          class="backdrop-image"
+        />
+
+        <div class="details-grid">
+          <div class="overview">
+            <h3>Storyline</h3>
+            <p>{{ movie.overview || "No overview available" }}</p>
+          </div>
+
+          <div class="stats">
+            <div class="stat-item">
+              <mat-icon class="stat-icon">language</mat-icon>
+              <div>
+                <h4>Original Language</h4>
+                <p>{{ movie.original_language | uppercase }}</p>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <mat-icon class="stat-icon">attach_money</mat-icon>
+              <div>
+                <h4>Budget</h4>
+                <p>
+                  {{ movie.budget | currency : "USD" : "symbol" : "1.0-0" }}
+                </p>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <mat-icon class="stat-icon">local_activity</mat-icon>
+              <div>
+                <h4>Revenue</h4>
+                <p>
+                  {{ movie.revenue | currency : "USD" : "symbol" : "1.0-0" }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </ng-container>
+
+  <!-- Loading State -->
+  <!-- <div *ngIf="loading" class="loading-state">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Loading movie details...</p>
+  </div> -->
+
+  <!-- Error State -->
+  <div *ngIf="error" class="error-state">
+    <mat-icon>error_outline</mat-icon>
+    <p>{{ error }}</p>
+    <button mat-raised-button color="primary" routerLink="/">
+      Back to Home
+    </button>
+  </div>
+</div>

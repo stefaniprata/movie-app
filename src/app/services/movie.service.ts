@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
+import { Movie } from '../interfaces/movie.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -28,8 +30,8 @@ export class MovieService {
   }
 
   // Gets detailed information for a specific movie by ID
-  getMovieDetails(id: number) {
-    return this.http.get(
+  getMovieDetails(id: number): Observable<Movie> {
+    return this.http.get<Movie>(
       `${environment.tmdbBaseUrl}/movie/${id}?api_key=${environment.tmdbApiKey}`
     );
   }
