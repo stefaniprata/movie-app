@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .movie-card {
   width: 200px;
   transition: transform 0.3s ease;
@@ -32,7 +34,7 @@
       .rating {
         display: flex;
         align-items: center;
-        color: #f5c518;
+        color: v.$color-secondary;
 
         mat-icon {
           font-size: 1.2em;
@@ -43,7 +45,7 @@
       }
 
       .year {
-        color: #666;
+        color: v.$color-text-secondary;
       }
     }
   }

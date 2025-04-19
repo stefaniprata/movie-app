@@ -43,52 +43,10 @@
               {{ genre.name }}
             </mat-chip>
           </mat-chip-set>
-        </div>
-      </div>
 
-      <!-- Content Section -->
-      <div class="content-section">
-        <img
-          *ngIf="movie.backdrop_path"
-          [src]="'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path"
-          [alt]="movie.title + ' backdrop'"
-          class="backdrop-image"
-        />
-
-        <div class="details-grid">
           <div class="overview">
             <h3>Storyline</h3>
             <p>{{ movie.overview || "No overview available" }}</p>
-          </div>
-
-          <div class="stats">
-            <div class="stat-item">
-              <mat-icon class="stat-icon">language</mat-icon>
-              <div>
-                <h4>Original Language</h4>
-                <p>{{ movie.original_language | uppercase }}</p>
-              </div>
-            </div>
-
-            <div class="stat-item">
-              <mat-icon class="stat-icon">attach_money</mat-icon>
-              <div>
-                <h4>Budget</h4>
-                <p>
-                  {{ movie.budget | currency : "USD" : "symbol" : "1.0-0" }}
-                </p>
-              </div>
-            </div>
-
-            <div class="stat-item">
-              <mat-icon class="stat-icon">local_activity</mat-icon>
-              <div>
-                <h4>Revenue</h4>
-                <p>
-                  {{ movie.revenue | currency : "USD" : "symbol" : "1.0-0" }}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
