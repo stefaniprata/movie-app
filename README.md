@@ -13,7 +13,7 @@ cd movie-app
 
 ```bash
 docker build -t stefani-movie-app .
-docker run -d -p 8080:80 --name stefani-movie-app-container stefani-movie-app
+docker run -d -p 8080:8080 --name stefani-movie-app-container stefani-movie-app
 ```
 
 Then open your browser and visit:
