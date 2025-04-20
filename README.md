@@ -11,9 +11,23 @@ git clone https://github.com/stefaniprata/movie-app.git
 cd movie-app
 ```
 
+You can use for local development using the following commands:
+
 ```bash
 docker build -t stefani-movie-app .
 docker run -d -p 8080:8080 --name stefani-movie-app-container stefani-movie-app
+```
+
+Or pull the already created image from [Docker Hub](https://hub.docker.com/r/stefaniprata/movie-app) by running this command:
+
+```bash
+docker pull stefaniprata/movie-app
+```
+
+and then running the following command to run the image you just pulled:
+
+```bash
+docker run -d -p 8080:8080 stefaniprata/movie-app:latest
 ```
 
 Then open your browser and visit:
