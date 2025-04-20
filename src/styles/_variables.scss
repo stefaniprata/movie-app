@@ -15,28 +15,6 @@ $color-text-secondary: #757575;
 $color-border: #e0e0e0;
 
 // ======================
-// Breakpoints
-// ======================
-$breakpoint-xs: 0; // Extra small
-$breakpoint-sm: 576px; // Small
-$breakpoint-md: 768px; // Medium
-$breakpoint-lg: 992px; // Large
-$breakpoint-xl: 1200px; // Extra large
-$breakpoint-xxl: 1400px; // Extra extra large
-
-// ======================
-// Spacing
-// ======================
-$spacing-unit: 8px;
-$spacing-xxs: $spacing-unit * 0.5; // 4px
-$spacing-xs: $spacing-unit * 1; // 8px
-$spacing-sm: $spacing-unit * 2; // 16px
-$spacing-md: $spacing-unit * 3; // 24px
-$spacing-lg: $spacing-unit * 4; // 32px
-$spacing-xl: $spacing-unit * 6; // 48px
-$spacing-xxl: $spacing-unit * 8; // 64px
-
-// ======================
 // Fonts
 // ======================
 $font-family-base: "Roboto", sans-serif;
@@ -48,48 +26,9 @@ $font-size-sm: 0.875rem; // 14px
 $font-size-md: 1.125rem; // 18px
 $font-size-lg: 1.25rem; // 20px
 $font-size-xl: 1.5rem; // 24px
+$font-size-xxl: 2rem; // 32px
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
-
-// ======================
-// Shadows
-// ======================
-$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.16);
-$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19);
-$shadow-xl: 0 15px 25px rgba(0, 0, 0, 0.21);
-$shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-
-// ======================
-// Borders
-// ======================
-$border-radius-sm: 4px;
-$border-radius-md: 8px;
-$border-radius-lg: 12px;
-$border-radius-xl: 16px;
-$border-radius-circle: 50%;
-
-// ======================
-// Z-index
-// ======================
-$z-index-low: 10;
-$z-index-medium: 100;
-$z-index-high: 1000;
-$z-index-top: 9999;
-
-// ======================
-// Transitions
-// ======================
-$transition-duration-fast: 0.15s;
-$transition-duration-normal: 0.3s;
-$transition-duration-slow: 0.45s;
-$transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-
-// ======================
-// Other
-// ======================
-$max-content-width: 1440px;
-$header-height: 64px;

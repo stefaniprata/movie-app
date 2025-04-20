@@ -18,7 +18,7 @@
     padding: 16px;
 
     h3 {
-      font-size: 1em;
+      font-size: v.$font-size-base;
       margin: 0 0 8px 0;
       white-space: nowrap;
       overflow: hidden;
@@ -29,7 +29,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.9em;
+      font-size: v.$font-size-base;
 
       .rating {
         display: flex;
@@ -37,9 +37,9 @@
         color: v.$color-secondary;
 
         mat-icon {
-          font-size: 1.2em;
-          height: 1.2em;
-          width: 1.2em;
+          font-size: v.$font-size-base;
+          height: 1.2rem;
+          width: 1.2rem;
           margin-right: 4px;
         }
       }

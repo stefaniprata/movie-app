@@ -77,14 +77,14 @@
 
       .movie-title {
         margin: 0 0 1rem 0;
-        font-size: 2.5rem;
-        font-weight: 700;
+        font-size: v.$font-size-xxl;
+        font-weight: v.$font-weight-bold;
         line-height: 1.2;
         color: v.$color-primary;
       }
 
       .movie-tagline {
-        font-size: 1.2rem;
+        font-size: v.$font-size-md;
         font-style: italic;
         color: rgba(v.$color-text-primary, 0.8);
         margin-bottom: 1.5rem;
@@ -106,11 +106,11 @@
 
           &__icon {
             color: v.$color-primary;
-            font-size: 1.2rem;
+            font-size: v.$font-size-md;
           }
 
           &__text {
-            font-weight: 500;
+            font-weight: v.$font-weight-medium;
             color: v.$color-text-secondary;
           }
         }
@@ -124,13 +124,13 @@
 
       .overview {
         h3 {
-          font-size: 1.5rem;
+          font-size: v.$font-size-lg;
           color: v.$color-text-primary;
           margin: 1.5rem 0 0.5rem;
         }
 
         p {
-          font-size: 1.1rem;
+          font-size: v.$font-size-md;
           line-height: 1.8;
           color: v.$color-text-secondary;
           margin: 0;
@@ -155,7 +155,7 @@
 
     p {
       color: v.$color-text-secondary;
-      font-size: 1.2rem;
+      font-size: v.$font-size-md;
     }
   }
 
@@ -165,12 +165,12 @@
     color: v.$color-danger;
 
     mat-icon {
-      font-size: 3.5rem;
+      font-size: v.$font-size-xxl;
       margin-bottom: 1.5rem;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: v.$font-size-md;
       margin-bottom: 2rem;
     }
 
@@ -188,7 +188,7 @@
       }
 
       .movie-title {
-        font-size: 2rem !important;
+        font-size: v.$font-size-xl !important;
       }
     }
   }
